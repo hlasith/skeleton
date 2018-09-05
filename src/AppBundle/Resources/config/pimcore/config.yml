@@ -1,0 +1,25 @@
+pimcore:
+    # we override the generated user model with a custom class which implements the UserInterface
+    #models:
+    #    class_overrides:
+    #        'Pimcore\Model\DataObject\User': 'AppBundle\Model\DataObject\User'
+
+    #sitemaps:
+    #    generators:
+    #        app_news: AppBundle\Sitemaps\NewsGenerator
+
+lucene_search:
+    enabled: true
+    fuzzy_search_results: true
+    search_suggestion: true
+    seeds:
+        - 'http://pimcore-basic.centos.vagrant'
+    filter:
+        valid_links:
+            - '@^http://pimcore-basic.centos.vagrant.*@i'
+    view:
+        max_per_page: 100
+    crawler:
+        content_max_size: 40
+        content_start_indicator: '<!-- main-content -->'
+        content_end_indicator: '<!-- /main-content -->'

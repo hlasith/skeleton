@@ -1,3 +1,94 @@
 imports:
     - { resource: config.yml }
 
+#doctrine:
+#    dbal:
+#        connections:
+#            default:
+#                host: 10.10.18.1
+#                port: 3306
+#                dbname: pimcore
+#                user: TS-8wiOPVF9AodKm
+
+parameters:
+    main.domain      : "pimcore.centos.vagrant"
+    main.js.minified.enable   : false
+    main.css.minified.enable  : false
+    RegisterUrl      : "https://authentication-service.centos.vagrant/registration?client_id=57HUAFHMJ7aUomZwoUABAisbTIQa&redirect_uri=https://ngl-one.centos.vagrant/tournament.html&state=eyJob3N0VXJsIjoiIiwiaGFzaH"
+    BootstrapperUrl  : "https://cdn-ngl-new.test.vitapublic.de/bootstrapper/57HUAFHMJ7aUomZwoUABAisbTIQa.min.js"
+    piwik.enable     : false
+    googleAnalytics.enable      : true
+    googleAnalytics.hostname    : "https://www.googletagmanager.com/gtag/js?id=%googleAnalytics.siteId%"
+    googleAnalytics.siteId      : "UA-122860046-4"
+    webappProfileUrl : "https://centos.vagrant:8890/player/X"
+
+    fontUrlRoboto         : "https://cdn-ngl-new.test.vitapublic.de/ngl-fonts/roboto/v1/Roboto.css"
+    fontUrlTitilliumWeb   : "https://cdn-ngl-new.test.vitapublic.de/ngl-fonts/titillium_web/v1/Titillium_Web.css"
+    fontUrlNglIconfont    : "https://cdn-ngl-new.test.vitapublic.de/fonts/ngl-iconfont.css"
+    fontUrlFontAwesome    : "https://cdn-ngl-new.test.vitapublic.de/fonts/font-awesome.css"
+
+    jsconfigAuthEndpoint                        : "https://authentication-service.centos.vagrant"
+    jsconfigTokenEndpoint                       : "https://identity.centos.vagrant/oauth2/token"
+    jsconfigTournamentEndpoint                  : "https://api-ngl-one.centos.vagrant/ess-tournament-service"
+    jsconfigAssetEndpoint                       : "https://cdn-ngl-one.centos.vagrant"
+    jsconfigProfileEndpoint                     : "https://centos.vagrant:8890"
+
+    jsconfigAppUrl                              : "http://pimcore.centos.vagrant/"
+
+    jsconfigApiVersion                          : "application/json"
+    jsconfigClientId                            : "57HUAFHMJ7aUomZwoUABAisbTIQa"
+
+    jsconfigCookieNamePageReload                : "ngl_page_reload"
+    jsconfigCookieNameIdTokenOrganizer          : "ngl_organizer"
+    jsconfigCookieNameIdTokenOrganizerExpires   : "ngl_organizer_exp"
+    jsconfigCookieNameIdTokenUser               : "ngl_user"
+    jsconfigCookieNameIdTokenUserExpires        : "ngl_user_exp"
+    jsconfigCookieNameRefreshTokenUser          : "ngl_refresh"
+    jsconfigCookieNameAccessTokenUser           : "ngl_access"
+    jsconfigCookieNameCookieAgreement           : "ngl_cookie_agreement"
+    jsconfigCookieNameGamezNotification         : "ngl_cookie_gamez_notification"
+    jsconfigCookieNameDisableAnalytics          : "ngl_cookie_disable_analytics"
+    jsconfigDefaultGameRankingRequestParameter  : "2?platform=playstation4&gamemode=classic"
+
+    jsconfigDebug                               : true
+
+    essApiClient.baseUrl  : "https://api-ngl-one.centos.vagrant"
+    essApiClient.apiKey   : "eyJ4NXQiOiJZekEyT0RJd01XVTNOV0ZoTURkbVl6TTFaamd5WkRobU5qUTFPRFU0WVRFeU5qa3lZelZrWWciLCJraWQiOiJkMGVjNTE0YTMyYjZmODhjMGFiZDEyYTI4NDA2OTliZGQzZGViYTlkIiwiYWxnIjoiUlMyNTYifQ.eyJhdF9oYXNoIjoiQWJPS1h1TUtLZ255bWNnZkhnaW5qdyIsImFjciI6InVybjptYWNlOmluY29tbW9uOmlhcDpzaWx2ZXIiLCJhdWQiOlsiTnNWWlNMOFJxOGJmb1pwOG9PUUszbzBhS1VBYSJdLCJyb2xlIjoiSW50ZXJuYWwvZXZlcnlvbmUsQXBwbGljYXRpb24vZXNzLWNtcyIsImF6cCI6Ik5zVlpTTDhScThiZm9acDhvT1FLM28wYUtVQWEiLCJzY29wZSI6Im9wZW5pZCIsIm5pY2tuYW1lIjoiZXNzLWNtcy1hbm9ueW1vdXMiLCJpc3MiOiJodHRwczovL25nbC1uZXcudGVzdC52aXRhcHVibGljLmRlL29hdXRoMi90b2tlbiIsImV4cCI6MTYwMTY2MjIxNiwiaWF0IjoxNTI3NDQ0NDM0LCJlbWFpbCI6ImVzcy1jbXMtYW5vbnltb3VzQHdzMDk5LnZpdGFwdWJsaWMuZGUifQ.kwPTlLAcUU5wZl4kSYD0oJDKGUq5sR5sXu9LEBOmcF9l9ucT7oN7bif71iCIOsH04qAT4BWP1e_G4Q3RWhLkbqE4v0y6B8mVOkowYVh7T8rfo9rlCT6qTfAd3wLzjaX6fDf2CxwJGvesK1br4HlBaIWFv_OmWboTO6iiMD6a7jJIZu1B-JzxPueVQ_bLI8Lr0GxWIiok-Da54WkGaWmcmsp3f6u6ZIALL47RHhZyYhZbuu2DOADuxd7WYI6zZGwQAPVRKK6mMKyJuhwABNfTt_T2RZgN_scI-BtXu3SmgQYq9ALRz7QyrEIM_QKHI17DyuS6eRkbAD14CPAs5Djs5g"
+
+    amaApiClient.baseUrl  : "https://ama-back-vagrant.test.vitapublic.de"
+    amaApiClient.apiKey   : "eyJ4NXQiOiJPRFpqTjJGaU1EQTRPREZoWVRFeU5qQTRaR1kyT1dKa05ERTFaRFk1TW1Fd01URXlNREE0WVEiLCJraWQiOiJkMGVjNTE0YTMyYjZmODhjMGFiZDEyYTI4NDA2OTliZGQzZGViYTlkIiwiYWxnIjoiUlMyNTYifQ.eyJhdF9oYXNoIjoiWVFFRDhqMm1TVWZ6OGRESURtU0ctUSIsImFjciI6InVybjptYWNlOmluY29tbW9uOmlhcDpzaWx2ZXIiLCJzdWIiOiJ0ZXN0LWFwaS10by1hbWFAY2FyYm9uLnN1cGVyIiwiYXVkIjpbIlFYQmo2OXFCNkpPSlZWaWRCRVN2T3o0OGVQOGEiXSwicm9sZSI6IkludGVybmFsL2V2ZXJ5b25lLEFwcGxpY2F0aW9uL2Vzcy1zdXBlci1hZG1pbiIsImF6cCI6IlFYQmo2OXFCNkpPSlZWaWRCRVN2T3o0OGVQOGEiLCJzY29wZSI6Im9wZW5pZCIsIm5pY2tuYW1lIjoiZXNzLWFwaSIsImlzcyI6Imh0dHBzOi8vaWRlbnRpdHkuY2VudG9zLnZhZ3JhbnQ6OTQ0My9vYXV0aDIvdG9rZW4iLCJleHAiOjE1Nzc4MzY4MDAsImlhdCI6MTUxMjA0NDkzMSwiZW1haWwiOiJ0ZXN0LWFwaS10by1hbWFAd3MwMzMudml0YXB1YmxpYy5kZSJ9.hShLYCkCYCrebpXKYzRIJSjlVlcCWLW0Wi01IhUiUwnQK6kzYsj3FklkdFy7rTQbQhZM0ZgGe-8Oxo792yGUqSOaad2Rrmuk8i6tnJRf_EYuImo8aqaygCIjDAA3XvWT-SLPmZbI-bhxmSocKZhSxu7r0UMB2SyrI_ZpIUErzJ7Bh-m05ljchlNdF99VmFYYEMHGA5HQGC4qWi_BUMXoNLxfi2AN5YKyGVbxyACrDZ85SLh42IsrRzwzNgwuACgHnjKMKtIZZY_HWXEgRv7--7iqlkqp6G4xuWDzzNsZSNG96bSaerMvVm93vyWRUTNg0n3vtJuUWsYWqEnuiZZt2A"
+
+    proClubHelper.proClubBaseUrl    : "https://centos.vagrant:8890/proclub/"
+    proClubHelper.mediaServerBaseUrl: "https://ama-media-vagrant.test.vitapublic.de"
+    proClubHelper.mediaServerTenant: "amateur"
+    proClubHelper.parentOrganizationId: 100326
+    proClubHelper.defaultLeagueId: 100370
+    proClubHelper.organizerToPlatfromMapping  :
+        100330: PLAYSTATION4
+        100071: XBOX
+        100075: PC
+    # Game ID only for FIFA18 in tournament system!
+    proClubHelper.organizerToGameIdMapping  :
+        100330: 5
+        100071: 5
+        100075: 5
+    essApiHelper.cdnBaseUrl : "https://cdn-ngl-one.centos.vagrant"
+
+pimcore:
+### REDIS CACHE
+    cache:
+        pools:
+            redis:
+                enabled: true
+                connection:
+                    server: localhost
+                    database: 14
+    documents:
+        tags:
+            map:
+                datetime: \AppBundle\Model\Document\Tag\DateTime
+
+monolog:
+    handlers:
+        main:
+            level : debug

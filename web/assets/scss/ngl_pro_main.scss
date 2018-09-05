@@ -1,0 +1,233 @@
+// general styles on HTML elements (h*, p, table, etc.)
+
+// import bootstrap
+@import "../../static/node_modules/bootstrap/scss/bootstrap";
+@import "../../static/node_modules/bootstrap/scss/bootstrap-grid";
+
+// import font awesome
+@import "../../static/node_modules/font-awesome-sass/assets/stylesheets/font-awesome";
+
+// import slick carousel
+@import "../../static/node_modules/slick-carousel/slick/slick.scss";
+
+// import lobibox
+@import "../../static/node_modules/lobibox/dist/css/lobibox";
+
+// import ngl variables
+@import "../../static/node_modules/ngl-ui-kit/proclub/scss/ngl_pro_variables";
+@import "../../static/node_modules/ngl-ui-kit/proclub/scss/ngl_pro_modular";
+@import "../../static/node_modules/ngl-ui-kit/proclub/scss/ngl_pro_utilities";
+
+// ngl general styles
+html {
+  height: 100%;
+
+  body {
+    color: $ngl-font-primary-color;
+    font-family: $ngl-font-family;
+    background-image: url(../images/proclub/ngl_home_bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: $ngl-color-black;
+    padding-top: 139px;
+    position: relative;
+    padding-bottom: 350px;
+    min-height: 100%;
+
+    a {
+      color: $ngl-font-primary-color;
+      cursor: pointer;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+    h1 {
+      font-weight: 900;
+    }
+    @for $index from 1 through 6 {
+      h#{$index} {
+        font-family: $ngl-headline-font;
+
+        &.border-top {
+          border-top: 1px solid $ngl-border-color-primary;
+          padding-top: 10px;
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    table {
+      td {
+        border-top: 1px solid $ngl-color-grey !important;
+      }
+      thead {
+        th {
+          border-bottom: 1px solid $ngl-color-grey !important;
+          font-weight: normal;
+        }
+      }
+    }
+    section {
+      max-width: $ngl-home-width;
+      margin: 0 auto;
+      background: $ngl-bg;
+    }
+    header {
+      min-height: 90px;
+
+      @include media-breakpoint-up(md) {
+        &.ngl-scroll-bg {
+          background: $ngl-blackHole-85;
+
+          .ngl-sub-nav {
+            .navbar-collapse {
+              background: transparent;
+            }
+          }
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        min-height: 1px;
+        height: 45px;
+        background: $ngl-blackHole;
+      }
+    }
+    .container {
+      max-width: $ngl-content-width;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .ngl-edit-footer {
+      background: $ngl-content-bg;
+    }
+    footer {
+      margin-top: 100px;
+      background: $ngl-blackHole-75;
+      padding: 2rem;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+
+      ul {
+        height: 50px;
+        padding-left: 0;
+
+        li {
+          padding: 0 .5rem;
+          line-height: 14px;
+          border-right: 1px solid $ngl-green;
+
+          a {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+          }
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+      p {
+        max-width: 500px;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 13px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      padding-top: 129px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 45px;
+    }
+
+    //import NGL skins (page specific overwrites)
+    @import "../../static/node_modules/ngl-ui-kit/proclub/scss/ngl_pro_skins";
+
+    //lobibox
+    .lobibox, .lobibox-notify {
+      font-family: $ngl-font-family;
+    }
+  }
+}
+
+//import mobile
+@import "../../static/node_modules/ngl-ui-kit/proclub/scss/ngl_pro_mobile";
+
+//bootstrap addition
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    &#{$infix} {
+      @include media-breakpoint-down($breakpoint) {
+        > .container,
+        > .container-fluid {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+
+      @include media-breakpoint-up($next) {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+
+        .navbar-nav {
+          flex-direction: row;
+
+          .dropdown-menu {
+            position: absolute;
+          }
+
+          .dropdown-menu-right {
+            right: 0;
+            left: auto; // Reset the default from `.dropdown-menu`
+          }
+
+          .nav-link {
+            padding-right: .5rem;
+            padding-left: .5rem;
+          }
+        }
+
+        // For nesting containers, have to redeclare for alignment purposes
+        > .container,
+        > .container-fluid {
+          flex-wrap: nowrap;
+        }
+
+        .navbar-collapse {
+          display: flex !important;  // stylelint-disable-line declaration-no-important
+
+          // Changes flex-bases to auto because of an IE10 bug
+          flex-basis: auto;
+        }
+
+        .navbar-toggler {
+          display: none;
+        }
+
+        .dropup {
+          .dropdown-menu {
+            top: auto;
+            bottom: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "pro_custom";
+
+@import "tempusdominus-bootstrap-4.css";

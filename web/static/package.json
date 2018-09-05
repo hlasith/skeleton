@@ -1,0 +1,68 @@
+{
+  "name": "ngl-home-grunt",
+  "version": "1.0.0",
+  "description": "Compile Sass to CSS using node-sass",
+  "license": "MIT",
+  "repository": "sindresorhus/grunt-sass",
+  "author": {
+    "name": "Harshana Lasith ",
+    "email": "h.lasith@vitapublic.de",
+    "url": "vitapublic.de"
+  },
+  "engines": {
+    "node": ">=6.5.0"
+  },
+  "scripts": {
+    "test": "xo && grunt"
+  },
+  "files": [
+    "tasks"
+  ],
+  "keywords": [
+    "gruntplugin",
+    "css",
+    "sass",
+    "scss",
+    "style",
+    "compile",
+    "preprocess",
+    "compile",
+    "libsass"
+  ],
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-rev": "*",
+    "grunt-sass": "2.1.0",
+    "grunt-shell": "*",
+    "grunt-smartrev": "*",
+    "jasmine-core": "2.6.2",
+    "jsonfile": "*",
+    "load-grunt-tasks": "*",
+    "time-grunt": "*",
+    "vp-google-fonts": "git+ssh://git@github.com:vitapublic/vp-google-fonts.git#master",
+    "xo": "^0.16.0"
+  },
+  "dependencies": {
+    "bootstrap": "*",
+    "font-awesome-sass": "*",
+    "grunt-cache-bust": "^1.7.0",
+    "jquery": "*",
+    "js-cookie": "*",
+    "lobibox": "*",
+    "moment": "*",
+    "moment-timezone": "*",
+    "ngl-ui-kit": "git+ssh://git@github.com/vitapublic/ngl-ui-kit.git#master",
+    "requirejs": "*",
+    "slick-carousel": "*",
+    "tempusdominus-bootstrap-4": "^5.0.1",
+    "tempusdominus-core": "5.0.0"
+  },
+  "peerDependencies": {
+    "grunt": ">=0.4.0"
+  }
+}

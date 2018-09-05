@@ -1,3 +1,1 @@
-imports:
-    - { resource: config.yml }
-
+/var/www/ngl-portal-bundle/app/config/config_prod.yml

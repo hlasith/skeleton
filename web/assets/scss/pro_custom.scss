@@ -1,0 +1,17 @@
+header {
+  nav {
+    a.ngl-link-orange {
+      color: #fec328;
+
+      &:hover {
+        color: #ffb900;
+      }
+    }
+  }
+}
+
+body.ngl-pro-home {
+  .font-weight-bold {
+    font-weight: 700!important;
+  }
+}

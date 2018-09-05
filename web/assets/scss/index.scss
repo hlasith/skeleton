@@ -1,0 +1,149 @@
+// general styles on HTML elements (h*, p, table, etc.)
+
+// import bootstrap
+@import "../../static/node_modules/bootstrap/scss/bootstrap";
+@import "../../static/node_modules/bootstrap/scss/bootstrap-grid";
+
+// import slick carousel
+@import "../../static/node_modules/slick-carousel/slick/slick.scss";
+
+// import lobibox
+@import "../../static/node_modules/lobibox/dist/css/lobibox";
+
+// import ngl variables
+@import "../../static/node_modules/ngl-ui-kit/ngl/scss/ngl_variables";
+@import "../../static/node_modules/ngl-ui-kit/ngl/scss/ngl_utilities";
+@import "../../static/node_modules/ngl-ui-kit/ngl/scss/ngl_modular";
+
+
+
+// ngl general styles
+html {
+  height: 100%;
+  font-size: 16px;
+
+  body {
+    font-family: $ngl-font-regular;
+    font-weight: $ngl-font-regular-weight;
+    -webkit-font-smoothing: antialiased;
+    color: #838994;
+    position: relative;
+    padding-bottom: 350px;
+    min-height: 100%;
+
+    //ngl skin views
+    &#ngl-theme-view {
+      @include themeView;
+    }
+    &#ngl-edit-view {
+      @include editView;
+    }
+    &.ngl-proclub-page {
+      padding-top: 158px !important;
+    }
+
+    //html element specific
+    @for $index from 1 through 6 {
+      h#{$index} {
+        font-family: $ngl-font-headline;
+
+        &.ngl-bold {
+          font-weight: 900;
+        }
+      }
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+    h5 {
+      font-size: 1.25rem;
+    }
+
+    ul,
+    ol {
+      li {
+        color: $ngl-greyWall;
+        font-weight: 300;
+      }
+    }
+    a {
+      @include linkControl;
+    }
+    //html structure specific
+    header {
+      min-height: 90px;
+
+      @include media-breakpoint-up(sm) {
+        &.ngl-scroll-bg {
+          background: $ngl-blackHole-85;
+        }
+        .ngl-scroll-bg {
+          background: $ngl-blackHole-85;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        min-height: 1px;
+        height: 45px;
+        background: $ngl-blackHole !important;
+      }
+    }
+    main {
+      max-width: $ngl-grid-width;
+      width: 100%;
+      margin: 0 auto;
+    }
+    footer {
+      margin-top: 100px;
+      background: $ngl-blackHole-75;
+      padding: 2rem;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+
+      ul {
+        height: 50px;
+        padding-left: 0;
+        list-style: none;
+
+        li {
+          padding: 0 .5rem;
+          line-height: 14px;
+          border-right: 1px solid $ngl-green;
+
+          a {
+            font-weight: 700;
+          }
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+      p {
+        max-width: 500px;
+        text-align: center;
+      }
+    }
+
+    //lobibox
+    .lobibox, .lobibox-notify {
+      font-family: $ngl-font-regular;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 13px;
+  }
+}
+
+@import "custom";
+
+@import "tempusdominus-bootstrap-4.css";
+

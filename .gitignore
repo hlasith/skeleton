@@ -52,11 +52,27 @@
 
 # PhpStorm / IDEA
 .idea
-# NetBeans
-nbproject
 
-# keep legacy paths ignored for easier migration
-/plugins/
-/tools/
-/website/
-.temp
+# temp files
+.DS_Store
+Thumbs.db
+
+# composer
+composer.lock
+vendor
+node_modules
+
+# code style fixer
+.php_cs
+.php_cs.cache
+yarn-error.log
+npm-debug.log
+/var/classes/DataObject
+!/var/classes/DataObject/.gitkeep
+/web/static/js/*.ngl-min.js
+/web/static/css/*.styles.css
+/web/static/css/*.styles-content.css
+
+styles-content.css
+styles.css
+ngl.js

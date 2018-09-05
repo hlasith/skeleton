@@ -1,0 +1,107 @@
+.navbar-expand {
+  .img-fluid img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* front page fix for user logged in state */
+
+@media (min-width: 992px) {
+
+  .CSSfixFrontpageUserMenu{
+    position:absolute!important;
+    top:27px!important;
+    right: 16px!important;
+  }
+}
+
+//user name in header width fix
+.ngl-main-nav .ngl-signed-user .ngl-card-userinfo h6, .ngl-main-nav .ngl-signed-user .ngl-card-userinfo span {
+    width: auto !important;
+    max-width: 170px !important;
+}
+
+/* frontpage fix for the profile link clicks on rankings */
+
+.JS_openProfileFromRanking{
+  cursor: pointer;
+}
+
+svg.placeholder {
+  max-width: 100%;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJ3aGl0ZSI+CiAgPHBhdGggZD0iTTAgNCBMMCAyOCBMMzIgMjggTDMyIDQgeiBNNCAyNCBMMTAgMTAgTDE1IDE4IEwxOCAxNCBMMjQgMjR6IE0yNSA3IEE0IDQgMCAwIDEgMjUgMTUgQTQgNCAwIDAgMSAyNSA3Ij48L3BhdGg+Cjwvc3ZnPg==") no-repeat center hsl(0, 0%, 80%);
+  background-size: calc(100%/3);
+}
+
+/* active state fix for pagination on content pages*/
+
+#ngl-theme-view .ngl-pagination li a {
+    font-weight: 600 !important;
+}
+
+#ngl-theme-view .ngl-pagination li a.active {
+    background: #454e5e !important;
+    color: #00f9c1 !important;
+}
+
+#ngl .ngl-search__form .ngl-btn-secondary {
+  min-width: auto !important;
+}
+
+#ngl #ngl-chat {
+  z-index: 1020 !important;
+}
+
+.area-wysiwyg ul {
+  list-style-type: none;
+
+  li {
+    color: white !important;
+    padding: 5px 0px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .area-wysiwyg ul {
+    padding-left: 0;
+  }
+
+}
+
+.ngl-table tr td span span {
+  cursor: pointer;
+}
+
+//pagination vertical center fix
+.ngl-pagination {
+  margin-bottom: auto !important;
+}
+
+#requiredFieldsModal .ngl-btn-primary {
+  text-align: center !important;
+}
+
+header {
+  nav {
+    a.ngl-link-secondary {
+      color: #fec328;
+
+      &:hover {
+        color: #ffb900;
+      }
+    }
+  }
+}
+
+html body footer p {
+  font-weight: 500 !important;
+}
+
+.ngl-dropdown button.disabled {
+  cursor: default !important;
+}
+
+
+
